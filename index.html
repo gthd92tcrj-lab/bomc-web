@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOMC | Real Estate Deal Architect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d0e10;
+            --card-bg: #141619;
+            --border-color: #24282e;
+            --text-main: #f0f2f5;
+            --text-muted: #8c95a1;
+            --accent: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            /* Jemná architektonická mřížka v pozadí */
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            text-transform: lowercase;
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+
+        .tagline {
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .hero {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 650px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 640px) {
+            .card-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 4px;
+        }
+
+        .card h3 {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .quote-section {
+            border-left: 2px solid var(--border-color);
+            padding-left: 20px;
+            margin-bottom: 60px;
+        }
+
+        .quote-section p {
+            font-size: 15px;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .quote-section .author {
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .contact-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 32px;
+            border-radius: 4px;
+            margin-bottom: 60px;
+        }
+
+        .contact-section h2 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--bg-color);
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 2px;
+            margin-top: 16px;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">bomc</div>
+            <div class="tagline">Real Estate Deal Architect</div>
+        </header>
+
+        <section class="hero">
+            <h1>Off-Market Investment Opportunities & Advisory</h1>
+            <p>Structuring complex real estate transactions, identifying hidden potential, and connecting institutional and private capital with maximum discretion.</p>
+        </section>
+
+        <section class="card-grid">
+            <div class="card">
+                <h3>Off-Market Sourcing</h3>
+                <p>Identification of undisclosed investment assets and development sites in prime locations.</p>
+            </div>
+            <div class="card">
+                <h3>Deal Architecture</h3>
+                <p>Designing optimal transaction frameworks, financial alignment, and zoning development masterplans.</p>
+            </div>
+            <div class="card">
+                <h3>Strategic Advisory</h3>
+                <p>Discreet representation for family offices, private investors, and institutional partners.</p>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <p>„I believe in meaningful connections — both in real estate and life. Open to ideas, people and unexpected moments that remind you of why you began.“</p>
+            <div class="author">Boris Moravec, Founder</div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Initiate a Conversation</h2>
+            <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">For discreet inquiries regarding off-market opportunities and transaction advisory:</p>
+            
+            <a href="mailto:boris@bomc.eu" class="btn">Send an Email (boris@bomc.eu)</a>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/borismoravec" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/bomc.eu" target="_blank">Instagram</a>
+                <a href="https://x.com" target="_blank">X</a>
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2026 BOMC. All rights reserved. | Prague, Czech Republic
+        </footer>
+    </div>
+
+</body>
+</html>
